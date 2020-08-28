@@ -26,14 +26,11 @@ namespace Dapper.UnitOfWork.Commands
             this.SqlParameters = param;
         }
 
+
         /// <summary>
-        /// Just if you want return some generated id by database after a insert
+        /// Just if you want return some generated id by database after an insert like an Sql Server identity code.
+        /// The generated id will be returned by reference in object passed in relatedEntity parameter
         /// </summary>
-        /// <param name="connection"></param>
-        /// <param name="sql"></param>
-        /// <param name="param"></param>
-        /// <param name="relatedEntity"></param>
-        /// <param name="fieldNameSetGeneratedId"></param>
         public CommandItem(IDbConnection connection, string sql, object param, object relatedEntity, string fieldNameSetGeneratedId)
         {
             this.Sql = sql;
