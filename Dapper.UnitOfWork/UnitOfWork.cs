@@ -13,7 +13,7 @@ namespace Dapper.UnitOfWork
         private bool _disposed = false;
         private IDbConnection Connection { get; set; }
         private IDbTransaction Transaction { get; set; }
-        private List<CommandItem> CommandsList { get; set; }
+        private ICollection<CommandItem> CommandsList { get; set; }
 
 
 
